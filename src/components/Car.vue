@@ -12,7 +12,7 @@
           <b>{{ car.make }} {{ car.model }}</b>
         </p>
         <p>
-          <em>${{ car.price.toFixed(2) }}</em>
+          <em>${{ car.priceS }}</em>
         </p>
 
         <router-link :to="{name: 'Car', params: { id: car.id } }">
@@ -21,21 +21,21 @@
 
         <hr>
 
-        <div class="text-right">
+        <!-- <div class="text-right">
           <router-link :to="{name: 'Profile', params: { id: car.creator.id }}">
             <img :src="car.creator.picture" alt="creator avatar" class="rounded-circle my-2" height="55">
             {{ car.creator.name }}
           </router-link>
-        </div>
+        </div> -->
 
-        <div v-if="car.creator.id === account.id">
+        <!-- <div v-if="car.creator.id === account.id">
           <button class="btn btn-warning btn-block" @click="editCar">
             EDIT CAR
           </button>
           <button class="btn btn-danger btn-block" @click="deleteCar">
             DELETE CAR
           </button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

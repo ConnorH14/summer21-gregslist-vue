@@ -7,14 +7,14 @@
 </template>
 
 <script>
-import { computed, onMounted } from '@vue/runtime-core'
+import { computed } from '@vue/runtime-core'
 import { AppState } from '../AppState'
-import { carsService } from '../services/CarsService'
+// import { carsService } from '../services/CarsService'
 export default {
   setup() {
-    onMounted(() => {
-      carsService.getCars()
-    })
+    // onMounted(() => {
+    //   carsService.getCars()
+    // })
 
     return {
       cars: computed(() => AppState.cars)
